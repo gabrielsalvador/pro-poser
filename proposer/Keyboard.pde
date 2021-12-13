@@ -5,15 +5,17 @@ class Keyboard {
 
   public Keyboard(int _x, int _y, int _w, int _h) {
     for (int i = 0; i<12*4; i++) {
-      Boundary b = new Boundary(_x + i*_width, _y, _width, _width);
-      b.pitch = 64 + i;
-      if (i%3 == 0) 
+
+
+      if (i%2 == 0)
       {
+        Boundary b = new Boundary(_x + i*_width, _y+i*5, _width, _width);
+        b.pitch = i;
         b._color = color(0, 0, 0);
+        blocks.add(b);
       } else {
-        b._color = color(255, 255, 255);
+        //b._color = color(255, 255, 255);
       }
-      blocks.add(b);
     }
   }
 
@@ -28,19 +30,19 @@ class Keyboard {
   void chord(int root) {
 
     color chord[] = {
-      color(0, 0, 0), 
-      color(255, 255, 255), 
-      color(255, 255, 255), 
-      color(0, 0, 0), 
-      color(255, 255, 255), 
-      color(255, 255, 255), 
-      color(255, 255, 255), 
-      color(0, 0, 0), 
-      color(255, 255, 255), 
+      color(0, 0, 0),
       color(255, 255, 255),
-      color(0, 0, 0), 
       color(255, 255, 255),
-      color(0, 0, 0), 
+      color(0, 0, 0),
+      color(255, 255, 255),
+      color(255, 255, 255),
+      color(255, 255, 255),
+      color(0, 0, 0),
+      color(255, 255, 255),
+      color(255, 255, 255),
+      color(0, 0, 0),
+      color(255, 255, 255),
+      color(0, 0, 0),
     };
 
     for (int i = 0; i<12*4; i++) {
