@@ -23,7 +23,7 @@ void setup() {
   //MIDI
 
   MidiBus.list(); // List all available Midi devices on STDOUT. This will show each device's index and name.
-  myBus = new MidiBus(this, "Barramento 1", "Bus 2"); // Create a new MidiBus with no input device and the default Java Sound Synthesizer as the output device.
+ // myBus = new MidiBus(this, "Barramento 1", "Bus 2"); // Create a new MidiBus with no input device and the default Java Sound Synthesizer as the output device.
 
   setupGUI();
 }
